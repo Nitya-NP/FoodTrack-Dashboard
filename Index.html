@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodTrack Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+
+        <div class="header">
+            <h1>Food Waste Dashboard</h1>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active">Today</button>
+            <button class="filter-btn">This Week</button>
+            <button class="filter-btn">This Month</button>
+            <select class="filter-btn">
+                <option>All Stations</option>
+                <option>Main Kitchen</option>
+                <option>Cafeteria</option>
+                <option>Buffet Line</option>
+            </select>
+            <select class="filter-btn">
+                <option>All Food Types</option>
+                <option>Grains</option>
+                <option>Proteins</option>
+                <option>Vegetables</option>
+                <option>Dairy</option>
+            </select>
+            <button class="export-btn">Export Data</button>
+        </div>
+
+        <!-- Main Metrics Section -->
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-icon">🗑️</div>
+                <div class="metric-label">Total Waste Today</div>
+                <div class="metric-value">124.5 kg</div>
+                <div class="metric-trend">▼ 8% vs yesterday</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon">📊</div>
+                <div class="metric-label">This Week</div>
+                <div class="metric-value">872 kg</div>
+                <div class="metric-trend">▼ 5% vs last week</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon">⚖️</div>
+                <div class="metric-label">Avg Daily Waste</div>
+                <div class="metric-value">124.6 kg</div>
+                <div class="metric-trend">Target: 110 kg</div>
+            </div>
+        </div>
+
+        <div class="two-col">
+
+            <div class="card">
+                <div class="card-header">
+                    <span>Waste Trends Over Time</span>
+                    <span class="card-subtitle">Daily | Weekly | Monthly</span>
+                </div>
+                <div class="card-body">
+                    <div class="trend-graph">
+                        <div class="trend-bar">
+                            <div class="bar" style="height: 70px;"></div>
+                            <div class="bar-label">Mon</div>
+                            <div class="bar-value">112kg</div>
+                        </div>
+                        <div class="trend-bar">
+                            <div class="bar" style="height: 88px;"></div>
+                            <div class="bar-label">Tue</div>
+                            <div class="bar-value">134kg</div>
+                        </div>
+                        <div class="trend-bar">
+                            <div class="bar" style="height: 60px;"></div>
+                            <div class="bar-label">Wed</div>
+                            <div class="bar-value">98kg</div>
+                        </div>
+                        <div class="trend-bar">
+                            <div class="bar highlight" style="height: 92px;"></div>
+                            <div class="bar-label">Thu</div>
+                            <div class="bar-value">142kg</div>
+                        </div>
+                        <div class="trend-bar">
+                            <div class="bar" style="height: 52px;"></div>
+                            <div class="bar-label">Fri</div>
+                            <div class="bar-value">87kg</div>
+                        </div>
+                        <div class="trend-bar">
+                            <div class="bar" style="height: 42px;"></div>
+                            <div class="bar-label">Sat</div>
+                            <div class="bar-value">69kg</div>
+                        </div>
+                        <div class="trend-bar">
+                            <div class="bar" style="height: 48px;"></div>
+                            <div class="bar-label">Sun</div>
+                            <div class="bar-value">78kg</div>
+                        </div>
+                    </div>
+                    <div class="trend-note">
+                        Shows whether portion changes are working
+                    </div>
+                </div>
+            </div>
+
+        
+            <div class="card">
+                <div class="card-header">
+                    <span>Breakdown by Food Type</span>
+                    <span class="card-subtitle">Most wasted items</span>
+                </div>
+                <div class="card-body">
+                    <div class="food-list">
+                        <div class="food-item">
+                            <div class="food-name">Rice</div>
+                            <div class="food-bar-container">
+                                <div class="food-bar highlight" style="width: 32%;">32%</div>
+                            </div>
+                            <div class="food-amount">42 kg</div>
+                        </div>
+                        <div class="food-item">
+                            <div class="food-name">Pasta</div>
+                            <div class="food-bar-container">
+                                <div class="food-bar" style="width: 24%;">24%</div>
+                            </div>
+                            <div class="food-amount">31 kg</div>
+                        </div>
+                        <div class="food-item">
+                            <div class="food-name">Vegetables</div>
+                            <div class="food-bar-container">
+                                <div class="food-bar" style="width: 18%;">18%</div>
+                            </div>
+                            <div class="food-amount">23 kg</div>
+                        </div>
+                        <div class="food-item">
+                            <div class="food-name">Bread</div>
+                            <div class="food-bar-container">
+                                <div class="food-bar" style="width: 14%;">14%</div>
+                            </div>
+                            <div class="food-amount">18 kg</div>
+                        </div>
+                        <div class="food-item">
+                            <div class="food-name">Chicken</div>
+                            <div class="food-bar-container">
+                                <div class="food-bar" style="width: 12%;">12%</div>
+                            </div>
+                            <div class="food-amount">16 kg</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="two-col">
+            <div class="card">
+                <div class="card-header">
+                    <span>⚠️ Alerts & Notifications</span>
+                    <span class="card-subtitle">Visual indicators</span>
+                </div>
+                <div class="card-body">
+                    <div class="alert-list">
+                        <div class="alert alert-red">
+                            <div class="alert-text">
+                                <div class="alert-title">HIGH WASTE ALERT</div>
+                                <div class="alert-desc">Rice waste 32% above forecast - immediate action needed</div>
+                            </div>
+                        </div>
+                        <div class="alert alert-yellow">
+                            <div class="alert-text">
+                                <div class="alert-title">Expiry Warning</div>
+                                <div class="alert-desc">Dairy products expiring in 2 days - adjust orders</div>
+                            </div>
+                        </div>
+                        <div class="alert alert-green">
+                            <div class="alert-text">
+                                <div class="alert-title">Positive Trend</div>
+                                <div class="alert-desc">Vegetable waste down 18% this week</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-header">
+                    <span>Actionable Insights</span>
+                    <span class="card-subtitle">Proactive suggestions</span>
+                </div>
+                <div class="card-body">
+                    <div class="insights-list">
+                        <div class="insight">
+                            <div class="insight-text">Reduce rice portions by 12% based on waste patterns</div>
+                        </div>
+                        <div class="insight">
+                            <div class="insight-text">Salad bar waste high - consider smaller serving sizes</div>
+                        </div>
+                        <div class="insight">
+                            <div class="insight-text">Bread stock expiring - reduce order quantity by 20%</div>
+                        </div>
+                        <div class="insight">
+                            <div class="insight-text">Evening waste 40% lower than morning - adjust production schedule</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
